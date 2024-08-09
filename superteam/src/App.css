@@ -1,13 +1,16 @@
+.admin-dashboard {
+  height: 100vh;
+}
+
 .custom-round-btn {
   width: 183.68px;
   height: 55px;
   background-color: rgba(16, 15, 15, 1);
-  border-radius: 45px 0px 0px 0px;
-  opacity: 0;
   border: none;
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: white;
 }
 
 .custom-round-btn:hover {

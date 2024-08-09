@@ -1,6 +1,14 @@
 import "../App.css";
 import PropTypes from "prop-types";
 
+Card.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
+
 export default function Card({ imageUrl, title, price, onEdit, onDelete }) {
   return (
     <div className="card-container">
@@ -20,11 +28,3 @@ export default function Card({ imageUrl, title, price, onEdit, onDelete }) {
     </div>
   );
 }
-
-Card.propTypes = {
-  imageUrl: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  onEdit: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
