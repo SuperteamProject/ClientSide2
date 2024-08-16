@@ -1,0 +1,16 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.container-fluid {
+  background-color: #ffffff;
+}
+
+.row {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.col-md-6 img {
+  object-fit: cover;
+}
