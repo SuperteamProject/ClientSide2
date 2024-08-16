@@ -10,11 +10,11 @@ export default function AdminPreview() {
     <>
       <div>
         <NavbarBlock children={"Menu Preview"} />
-        <div className="container mt-5">
+        <div className="mt-5">
           <div className="row justify-content-center">
             <div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
               <Card
-                imageUrl="/ClientSide2/superteam/Assets/pizza-1.png"
+                imageUrl="../../assets/pizza-1.png"
                 title="Pepperoni Pizza"
                 price="20.000"
                 onDelete={deletePizza}

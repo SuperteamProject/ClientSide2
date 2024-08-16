@@ -6,7 +6,7 @@ import "../App.css";
 export default function AdminDashboard() {
   return (
     <>
-      <div className="container">
+      <div>
         <NavbarBlock children={"See all Menu "} />
         <div
           className="d-flex flex-column align-items-center justify-content-center"
