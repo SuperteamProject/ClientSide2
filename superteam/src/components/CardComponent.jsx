@@ -1,4 +1,3 @@
-import "../App.css";
 import PropTypes from "prop-types";
 
 Card.propTypes = {
@@ -12,15 +11,15 @@ Card.propTypes = {
 export default function Card({ imageUrl, title, price, onEdit, onDelete }) {
   return (
     <div className="card-container">
-      <img src={imageUrl} alt={title} className="card-image" />
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-price">Rp.{price}</p>
-        <div className="card-actions">
-          <button className="btn btn-dark" onClick={onEdit}>
+      <img src={imageUrl} alt={title} className="card__image" />
+      <div className="card__body">
+        <h3 className="card__title">{title}</h3>
+        <p className="card__price">Rp.{price}</p>
+        <div className="card__button">
+          <button onClick={onEdit} className="card__button-edit">
             Edit Order
           </button>
-          <button className="btn btn-link" onClick={onDelete}>
+          <button onClick={onDelete} className="card__button-trash">
             <i className="bi bi-trash"></i>
           </button>
         </div>
