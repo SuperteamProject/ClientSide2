@@ -14,7 +14,9 @@ export default function AdminEditPizza() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`URL_BACKEND_KAMU/product/${id}`);
+        const response = await fetch(
+          `serverside2-production.up.railway.app/api/v1/all-product`
+        );
         const product = await response.json();
         setName(product.name);
         setPrice(product.price);
@@ -39,14 +41,17 @@ export default function AdminEditPizza() {
     }
 
     try {
-      const response = await fetch(`URL_BACKEND_KAMU/product/${id}`, {
-        method: "PUT",
-        body: formData,
-      });
+      const response = await fetch(
+        `serverside2-production.up.railway.app/api/v1/${id}/update-product`,
+        {
+          method: "PUT",
+          body: formData,
+        }
+      );
 
       if (response.ok) {
         alert("Product updated successfully!");
-        navigate("/admin"); // Kembali ke halaman admin setelah edit
+        navigate("/admin/preview");
       } else {
         const result = await response.json();
         alert("Error: " + result.message);

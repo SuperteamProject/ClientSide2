@@ -31,10 +31,13 @@ export default function AdminDashboard() {
     formData.append("price", productPrice);
 
     try {
-      const response = await fetch("URL_BACKEND_KAMU/postProduct", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "serverside2-production.up.railway.app/api/v1/upload-product",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const result = await response.json();
 
