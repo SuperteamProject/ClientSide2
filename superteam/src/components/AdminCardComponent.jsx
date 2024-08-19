@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
+import React from "react";
 
-Card.propTypes = {
+AdminCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
@@ -8,16 +9,22 @@ Card.propTypes = {
   onDelete: PropTypes.func.isRequired,
 };
 
-export default function Card({ imageUrl, title, price, onEdit, onDelete }) {
+export default function AdminCard({
+  imageUrl,
+  title,
+  price,
+  onEdit,
+  onDelete,
+}) {
   return (
     <div className="card-container">
       <img src={imageUrl} alt={title} className="card__image" />
       <div className="card__body">
         <h3 className="card__title">{title}</h3>
-        <p className="card__price">Rp.{price}</p>
+        <p className="card__price">Rp {price}</p>
         <div className="card__button">
           <button onClick={onEdit} className="card__button-edit">
-            Edit Order
+            Edit Product
           </button>
           <button onClick={onDelete} className="card__button-trash">
             <i className="bi bi-trash"></i>
